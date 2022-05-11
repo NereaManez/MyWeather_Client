@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.VisualizeDataActivity">
+
+    <ImageView
+        android:id="@+id/vd_weatherImg"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="vd_weather img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/vd_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_weatherImg"
+        app:layout_constraintStart_toEndOf="@+id/vd_weatherImg"
+        app:layout_constraintTop_toTopOf="@+id/vd_weatherImg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/vd_weatherText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_weatherImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vd_weatherImg"
+        app:layout_constraintTop_toTopOf="@+id/vd_weatherImg" />
+
+    <TextView
+        android:id="@+id/vd_tempMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Temp Max"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/vd_weatherImg"
+        app:layout_constraintTop_toBottomOf="@+id/vd_weatherImg" />
+
+    <TextView
+        android:id="@+id/vd_tempMaxText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_tempMax"
+        app:layout_constraintStart_toEndOf="@+id/vd_tempMax"
+        app:layout_constraintTop_toTopOf="@+id/vd_tempMax" />
+
+    <TextView
+        android:id="@+id/vd_tempMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Temp MIn"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_tempMaxText"
+        app:layout_constraintEnd_toStartOf="@+id/vd_tempMinText"
+        app:layout_constraintTop_toTopOf="@+id/vd_tempMaxText" />
+
+    <TextView
+        android:id="@+id/vd_tempMinText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="TextView"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_tempMin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vd_tempMin" />
+
+    <TextView
+        android:id="@+id/vd_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Temp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_weatherImg"
+        app:layout_constraintStart_toEndOf="@+id/vd_weatherImg"
+        app:layout_constraintTop_toTopOf="@+id/vd_weatherImg"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/vd_tempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_temp"
+        app:layout_constraintStart_toEndOf="@+id/vd_temp"
+        app:layout_constraintTop_toTopOf="@+id/vd_temp" />
+
+    <TextView
+        android:id="@+id/vd_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Humedad"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/vd_feelsLike"
+        app:layout_constraintTop_toBottomOf="@+id/vd_feelsLike" />
+
+    <TextView
+        android:id="@+id/vd_humidityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_humidity"
+        app:layout_constraintStart_toEndOf="@+id/vd_humidity"
+        app:layout_constraintTop_toTopOf="@+id/vd_humidity" />
+
+    <TextView
+        android:id="@+id/vd_windSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Velocidad viento"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/vd_humidity"
+        app:layout_constraintTop_toBottomOf="@+id/vd_humidity" />
+
+    <TextView
+        android:id="@+id/vd_windSpeedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_windSpeed"
+        app:layout_constraintStart_toEndOf="@+id/vd_windSpeed"
+        app:layout_constraintTop_toTopOf="@+id/vd_windSpeed" />
+
+    <TextView
+        android:id="@+id/vd_feelsLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Sensacion termica"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/vd_tempMax"
+        app:layout_constraintTop_toBottomOf="@+id/vd_tempMax" />
+
+    <TextView
+        android:id="@+id/vd_feelsLikeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_feelsLike"
+        app:layout_constraintStart_toEndOf="@+id/vd_feelsLike"
+        app:layout_constraintTop_toTopOf="@+id/vd_feelsLike" />
+
+    <TextView
+        android:id="@+id/vd_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Presión atmosférica"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/vd_windSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/vd_windSpeed" />
+
+    <TextView
+        android:id="@+id/vd_pressureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_pressure"
+        app:layout_constraintStart_toEndOf="@+id/vd_pressure"
+        app:layout_constraintTop_toTopOf="@+id/vd_pressure" />
+
+    <TextView
+        android:id="@+id/vd_seaLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Nivel mar"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/vd_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/vd_pressure" />
+
+    <TextView
+        android:id="@+id/vd_seaLevelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_seaLevel"
+        app:layout_constraintStart_toEndOf="@+id/vd_seaLevel"
+        app:layout_constraintTop_toTopOf="@+id/vd_seaLevel" />
+
+    <TextView
+        android:id="@+id/vd_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/vd_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vd_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
