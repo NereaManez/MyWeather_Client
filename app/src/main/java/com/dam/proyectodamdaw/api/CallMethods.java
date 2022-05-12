@@ -9,12 +9,15 @@ import java.io.IOException;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class CallMethods<T>  {
 
     private Retrofit retrofit = new Retrofit.Builder().baseUrl(Parameters.URL).build();
     private APIService service = retrofit.create(APIService.class);
+    private Retrofit retrofitCity = new Retrofit.Builder().baseUrl(Parameters.URL_CITY).build();
+    private APIService serviceCity = retrofitCity.create(APIService.class);
     private static CallMethods callMethods;
 
     public static CallMethods getCallMethodsObject(){
@@ -38,6 +41,16 @@ public class CallMethods<T>  {
         Call<ResponseBody> call = service.postCall(url, data);
         try {
             return call.execute().body().string();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Response<ResponseBody> postP(String url, RequestBody data){
+        Call<ResponseBody> call = serviceCity.postCall(url, data);
+        try {
+            return call.execute();
         } catch (IOException e) {
             e.printStackTrace();
         }
